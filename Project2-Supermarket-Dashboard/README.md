@@ -1,86 +1,86 @@
-🛒 Supermarket Dashboard – Data Analytics with Power Query & Power Pivot
-Project Overview
+# 🛒 Supermarket Dashboard – Data Analytics with Power Query & Power Pivot  
 
-This project demonstrates how to clean, transform, and analyze supermarket sales data using Power Query and Power Pivot, then build an interactive dashboard with KPIs and charts.
+## 📌 Project Overview  
+This project demonstrates how to clean, transform, and analyze supermarket sales data using **Power Query** and **Power Pivot**, then build an **interactive dashboard** with KPIs and charts.  
 
-The workflow follows professional data analytics practices: data cleaning, feature engineering, enrichment with custom columns, and dashboard creation.
+The workflow follows professional data analytics practices: data cleaning, feature engineering, enrichment with custom columns, and dashboard creation.  
 
-🔧 Data Preparation with Power Query
+---
 
-Check for Duplicated Data
+## 🔧 Data Preparation with Power Query  
 
-Identify and remove duplicates to ensure data consistency.
+1. **Check for Duplicated Data**  
+   - Identify and remove duplicates to ensure data consistency.  
 
-Handle Blank Rows
+2. **Handle Blank Rows**  
+   - Remove or impute missing rows/values.  
 
-Remove or impute missing rows/values.
+3. **Create a New Column – Invoice_ID**  
+   - Merge the first three columns separated by `-`.  
 
-Create a New Column – Invoice_ID
+4. **Transform Gender Column**  
+   - Replace `F → Female`, `M → Male`.  
 
-Merge the first three columns separated by -.
+5. **Validate Price Column**  
+   - Check for negative or unrealistic values.  
 
-Transform Gender Column
+6. **Check Spelling in Product Line Column**  
+   - Standardize product categories.  
 
-Replace F → Female, M → Male.
+7. **Add Serial Column**  
+   - Auto-increment starting from 1.  
 
-Validate Price Column
+8. **Add Custom Column – Tax_5%**  
+   - Formula: `Unit_Price * Quantity * 0.05`.  
 
-Check for negative or unrealistic values.
+9. **Add Custom Column – Total Sales**  
+   - Formula: `(Unit_Price * Quantity) + Tax_5%`.  
 
-Check Spelling in Product Line Column
+10. **Add Conditional Column – Sales Category**  
+   - Logic:  
+     - `< 200 → Low`  
+     - `< 500 → Medium`  
+     - `>= 500 → High`.  
 
-Standardize product categories.
+11. **Extract Year from Date Column**  
+   - Enables time-based analysis.  
 
-Add Serial Column
+---
 
-Auto-increment starting from 1.
+## 🗂️ Data Modeling with Power Pivot  
+- Load transformed data into the **Data Model**.  
+- Build relationships as needed.  
+- Create **measures and KPIs** to summarize performance.  
 
-Add Custom Column – Tax_5%
+---
 
-Formula: Unit_Price * Quantity * 0.05.
+## 📊 Dashboard KPIs  
 
-Add Custom Column – Total Sales
+1. **إجمالي المبيعات** (Total Sales)  
+2. **إجمالي الربح** (Total Profit)  
+3. **إجمالي الخصومات** (Total Discounts)  
+4. **عدد الطلبات** (Number of Orders)  
+5. **عدد العملاء** (Number of Customers)  
 
-Formula: (Unit_Price * Quantity) + Tax_5%.
+---
 
-Add Conditional Column – Sales Category
+## 📈 Dashboard Visuals  
 
-Logic:
+1. **الربح على مدار السنوات (Profit over Years)** → Line Chart  
+2. **المبيعات حسب Client Segment** → Pie Chart  
+3. **أعلى 10 منتجات الأكثر طلبًا** → Column/Bar Chart  
+4. **أعلى 10 منتجات الأكثر تحقيقًا للمبيعات (الربح)** → Column/Bar Chart  
+5. **إجمالي الربح لكل Ship Mode** → Pie Chart  
+6. **أعلى 10 عملاء حققت الشركة منهم أرباح** → Column/Bar Chart  
 
-< 200 → Low
+---
 
-< 500 → Medium
+## 🚀 Key Skills Applied  
+- Data Cleaning & Transformation with **Power Query**  
+- Data Modeling with **Power Pivot**  
+- KPI & Metric Calculation  
+- Interactive Dashboard Design with **Excel/Power BI**  
 
->= 500 → High.
+---
 
-Extract Year from Date Column
-
-Enables time-based analysis.
-
-📊 Data Modeling with Power Pivot
-
-Load transformed data into the Data Model.
-
-Build relationships as needed.
-
-Create measures and KPIs to summarize performance.
-
-📈 Dashboard Design
-
-The final interactive dashboard includes:
-
-4 KPIs (e.g., Total Sales, Total Quantity, Average Sales, Number of Invoices).
-
-6 Charts for deeper insights (e.g., Sales by Gender, Sales by Product Line, Monthly Trends, Sales Category Distribution).
-
-🚀 Key Skills Applied
-
-Data Cleaning & Transformation with Power Query
-
-Data Modeling with Power Pivot
-
-KPI & Metric Calculation
-
-Data Visualization & Dashboard Design
-
-📌 This project showcases how raw transactional data can be transformed into actionable business insights using Excel’s advanced BI tools.
+📌 *This project showcases how raw transactional data can be transformed into actionable business insights using Excel’s advanced BI tools.*  
